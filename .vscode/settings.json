@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+        "Makefile.in": true,
+        "aclocal.m4": true,
+        "autom4te.cache/": true,
+        "compile": true,
+        "configure": true,
+        "depcomp": true,
+        "install-sh": true,
+        "missing": true
+    }
+}
