@@ -1,8 +1,17 @@
 #include <stdio.h>
-#include "autotoolstest.h"
+#include <stdlib.h>
+#include <pthread.h>
 
-int main(void)
+static void * print_it(void * data)
 {
-        printf("My name is %s.\n", MY_NAME);
-        return 0;
+    printf("Hello from %s!\n", (const char *)data);
+    return 0;
+}
+
+int main(int argc, char * argv[])
+{
+    pthread_t tid;
+    pthread_create(&tid, 0, print_it, argv[0]);
+    pthread_join(tid, 0);
+    return 0;
 }
