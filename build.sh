@@ -6,7 +6,7 @@ mkdir -p $BUILD_DIR
 
 cd $SCRIPT_DIR
 
-autoreconf
+autoreconf -i
 cd $BUILD_DIR
 $SCRIPT_DIR/configure
 make
